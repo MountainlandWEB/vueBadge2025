@@ -5,19 +5,21 @@
         <ion-title>Tab 1</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <ion-content class="ion-padding">
+      
+      <ion-input label="Badge count" type="number" :clear-input="true" 
+        v-model="badgeCount"></ion-input>
 
-      <ExploreContainer name="Tab 1 page" />
+      <ion-button expand="full" color="primary" @click="badgeCount = 0">
+        Mark as Read</ion-button>
+
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import { IonButton, IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput } from '@ionic/vue';
+import { ref } from 'vue';
+
+const badgeCount = ref(3);
 </script>
