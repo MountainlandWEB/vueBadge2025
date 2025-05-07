@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@awesome-cordova-plugins/badge':
+        specifier: ^6.16.0
+        version: 6.16.0(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.2))(rxjs@7.8.2)
+      '@awesome-cordova-plugins/core':
+        specifier: ^6.16.0
+        version: 6.16.0(rxjs@7.8.2)
       '@capacitor/app':
         specifier: 7.0.1
         version: 7.0.1(@capacitor/core@7.2.0)
@@ -29,6 +35,12 @@ importers:
       '@ionic/vue-router':
         specifier: ^8.5.6
         version: 8.5.6(@stencil/core@4.31.0)(vue-router@4.5.1(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
+      cordova-plugin-badge:
+        specifier: ^0.8.9
+        version: 0.8.9
+      cordova-plugin-device:
+        specifier: ^3.0.0
+        version: 3.0.0
       ionicons:
         specifier: ^7.4.0
         version: 7.4.0
@@ -96,6 +108,17 @@ packages:
     engines: {node: '>=10'}
     peerDependencies:
       ajv: '>=8'
+
+  '@awesome-cordova-plugins/badge@6.16.0':
+    resolution: {integrity: sha512-n0lBbyRm4sOFErI11uJ5ruvwxjqTEPBUFq0lcVw/GjumVFEnef+5S7ysJcjbnW9HeKuuOwEAxrwTl7fdgRdnxQ==}
+    peerDependencies:
+      '@awesome-cordova-plugins/core': ^6.0.1
+      rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
+
+  '@awesome-cordova-plugins/core@6.16.0':
+    resolution: {integrity: sha512-ep+nkDY6CyFBfqS/HS03PE+MZWiQoJWb/nLMwfj2ndC14UgZeVO3ecmEFknYjJOBf04emTbs7hbLewFrVkazmg==}
+    peerDependencies:
+      rxjs: ^5.5.0 || ^6.5.0 || ^7.3.0
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -1108,6 +1131,9 @@ packages:
   '@types/chai@4.3.20':
     resolution: {integrity: sha512-/pC9HAB5I/xMlc5FP77qjCnI16ChlJfW0tGa0IUcFn38VJrTV6DeZ60NU5KZBtaOZqjdpwTWohz5HU1RrhiYxQ==}
 
+  '@types/cordova@11.0.3':
+    resolution: {integrity: sha512-kyuRQ40/NWQVhqGIHq78Ehu2Bf9Mlg0LhmSmis6ZFJK7z933FRfYi8tHe/k/0fB+PGfCf95rJC6TO7dopaFvAg==}
+
   '@types/estree@0.0.39':
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
 
@@ -1612,6 +1638,14 @@ packages:
 
   convert-source-map@2.0.0:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
+
+  cordova-plugin-badge@0.8.9:
+    resolution: {integrity: sha512-oVv+z3B7Jgi7/gnE/jvSnjBsBNwZVoLmJYwTUw3nLmp50fnY22H7NWthTachEdle2EljDk8AzvhuDpdf0triIw==}
+    engines: {'0': {name: cordova, version: '>=6.0.0'}, '1': {name: apple-ios, version: '>=10.0.0'}, '2': {name: cordova-android, version: '>=4'}, '3': {name: cordova-plugman, version: '>=4.2.0'}}
+
+  cordova-plugin-device@3.0.0:
+    resolution: {integrity: sha512-g8fFYOvleeYpklWvHwZ/T8/IzJe/3O0MGVDIUoqBru4v8SNDAbNVD3oOqoOQANBWGFQMg7GIkAAl8errCHZ7zQ==}
+    engines: {cordovaDependencies: {2.1.0: {cordova-electron: '>=3.0.0'}, 3.0.0: {cordova-android: '>=7.0.0', cordova-electron: '>=3.0.0'}, 4.0.0: {cordova: '>100'}}}
 
   core-js-compat@3.42.0:
     resolution: {integrity: sha512-bQasjMfyDGyaeWKBIu33lHh9qlSR0MFE/Nmc6nMjf/iU9b3rSMdAYz1Baxrv4lPdGUsTqZudHA4jIGSJy0SWZQ==}
@@ -3609,6 +3643,17 @@ snapshots:
       jsonpointer: 5.0.1
       leven: 3.1.0
 
+  '@awesome-cordova-plugins/badge@6.16.0(@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.2))(rxjs@7.8.2)':
+    dependencies:
+      '@awesome-cordova-plugins/core': 6.16.0(rxjs@7.8.2)
+      '@types/cordova': 11.0.3
+      rxjs: 7.8.2
+
+  '@awesome-cordova-plugins/core@6.16.0(rxjs@7.8.2)':
+    dependencies:
+      '@types/cordova': 11.0.3
+      rxjs: 7.8.2
+
   '@babel/code-frame@7.27.1':
     dependencies:
       '@babel/helper-validator-identifier': 7.27.1
@@ -4744,6 +4789,8 @@ snapshots:
 
   '@types/chai@4.3.20': {}
 
+  '@types/cordova@11.0.3': {}
+
   '@types/estree@0.0.39': {}
 
   '@types/estree@1.0.7': {}
@@ -5301,6 +5348,10 @@ snapshots:
       proto-list: 1.2.4
 
   convert-source-map@2.0.0: {}
+
+  cordova-plugin-badge@0.8.9: {}
+
+  cordova-plugin-device@3.0.0: {}
 
   core-js-compat@3.42.0:
     dependencies:
